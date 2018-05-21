@@ -33,7 +33,7 @@ public class pruebasPractica6 {
 		System.out.println("¿las cordenadas son iguales?:" + Co1.Igualdad(Co2));
 		System.out.println("suma:" + Co1.Suma());
 		
-		// ejercicio 9
+		// ejercicio 9 //Dudas
 		Vector3D V1 = new Vector3D(1);
 		Vector3D V2 = new Vector3D(2, 5, 3);
 		Vector3D V3 = Vector3D.Suma(V1, V2);
