@@ -24,7 +24,21 @@ public class pruebasPractica6 {
 		//ejercicio 7
 		Empleado emp = new Empleado(1, "Pepe");
 		emp.verDato();
-
+		
+		// ejercicio 8
+		Coordenadas Co1 = new Coordenadas(1);
+		Coordenadas Co2 = new Coordenadas(2, 5);
+		Co1.mostrarCoordenada();
+		Co1.Suma();
+		System.out.println("¿las cordenadas son iguales?:" + Co1.Igualdad(Co2));
+		System.out.println("suma:" + Co1.Suma());
+		
+		// ejercicio 9
+		Vector3D V1 = new Vector3D(1);
+		Vector3D V2 = new Vector3D(2, 5, 3);
+		Vector3D V3 = Vector3D.Suma(V1, V2);
+		V3.Coordenadas();
+		System.out.println("vectores iguales:" + V1.Iguales(V1, V2));
 	}
 
 }

@@ -18,4 +18,5 @@ public class Lamparita {
 	public EstadoLampara getEstado() {
 		return estado;
 	}
+
 }
