@@ -2,7 +2,7 @@ package aye2.practica6;
 
 public class Empleado {
 	private int numero;
-	private string nombre;
+	private String nombre;
 	
 	public Empleado() {
 		numero = 0;
@@ -19,13 +19,13 @@ public class Empleado {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public string getNombre(){
+	public String getNombre(){
 		return nombre;
 	}
-	public void setNombre(string nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public void verDatos() {
+	public void verDato() {
 		System.out.println("empleado nro:" + numero + "nombre:" + nombre);
 	}
 	
