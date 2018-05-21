@@ -12,17 +12,17 @@ public class Vector3D {
 	private float y;
 	private float z;
 	
-	public Vector3D(float m, float n, float o){
+	public Vector3D (float m, float n, float o){
 		x = m;
 		y = n;
 		z = o;
 	}
-	public Vector3D(float m) {
+	public Vector3D (float m) {
 		this(m, m, m);
 	}
 	
 	public void Coordenadas() {
-		System.out.println("(" + x + "," + y + ")");
+		System.out.println("(" + x + "," + y + "," + z + ")");
 	}
 	public static Vector3D Suma(Vector3D V1, Vector3D V2) {
 		Vector3D V3 = new Vector3D(0);
@@ -31,8 +31,8 @@ public class Vector3D {
 		V3.z = V1.z + V2.z;
 		return V3;
 	}
-	public boolean Iguales(Vector3D V1, Vector3D V2) {
-		if ((V1.x == V2.x) && (V1.y == V2.y) && (V1.z == V2.z)) {
+	public boolean Iguales(Vector3D V2) {
+		if ((x == V2.x) && (y == V2.y) && (z == V2.z)) {
 			return true;
 		}else {
 			return true;

@@ -38,7 +38,7 @@ public class pruebasPractica6 {
 		Vector3D V2 = new Vector3D(2, 5, 3);
 		Vector3D V3 = Vector3D.Suma(V1, V2);
 		V3.Coordenadas();
-		System.out.println("vectores iguales:" + V1.Iguales(V1, V2));
+		System.out.println("vectores iguales:" + V1.Iguales(V2));
 	}
 
 }
