@@ -39,6 +39,18 @@ public class pruebasPractica6 {
 		Vector3D V3 = Vector3D.Suma(V1, V2);
 		V3.Coordenadas();
 		System.out.println("vectores iguales:" + V1.Iguales(V2));
+		
+		//ejercicio 10
+		Complejo C1 = new Complejo(2,5);
+		Complejo C2 = new Complejo(3,4);
+		
+		C1.Multipl(C2);
+		C1.Mostrar();
+		
+		C1.Suma(3.1f, 1.2f).Mostrar();
+		C1.Suma(2, 3).Mostrar();
+		C1.Suma(C1, C2).Mostrar();
+		
 	}
 
 }

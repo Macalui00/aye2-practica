@@ -12,7 +12,7 @@ public class Complejo {
 		a = x;
 		b = y;
 	}
-	public  Complejo Multipl(Complejo C2) {
+	public  void Multipl (Complejo C2) {
 		int n;
 		int m;
 		m = a;
@@ -21,17 +21,39 @@ public class Complejo {
 		b = n * C2.a + n * C2.b;
 
 	}
-	public static Complejo Suma(int w, int z) {
+	public Complejo Suma(int w, int z) {
 		int m;
 		int n;
-		m <-- a + w;
-		n <-- b + z;
+		m = a + w;
+		n = b + z;
 		Complejo C3 = new Complejo(m, n);
 		return C3;
 	}
-	public static Complejo Suma(float w, float z) {
+	
+	public Complejo Suma(float w, float z) {
 		int m;
 		int n;
+		m =(int)w;
+		n =(int)z;
+		Complejo C3 = new Complejo(m + a,n + b);
+		return C3;
 	}
-	
+	public Complejo Suma(Complejo C1, Complejo C2) {
+		int m;
+		int n;
+		m = C1.a + C2.a;
+		n = C1.b + C2.b;
+		Complejo C3 = new Complejo(m, n);
+		return C3;
+	}
+	public void Mostrar() {
+		if (b == 0) {
+			System.out.println(a);
+		} else if (a == 0) {
+			System.out.println(b);
+		} else {
+			System.out.println(a + "+" + b + "i");
+		}
+		
+	}
 }
