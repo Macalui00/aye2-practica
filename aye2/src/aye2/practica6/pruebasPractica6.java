@@ -51,6 +51,23 @@ public class pruebasPractica6 {
 		C1.Suma(2, 3).Mostrar();
 		C1.Suma(C1, C2).Mostrar();
 		
+		// ejercicio 12
+		Fecha F1 = new Fecha(30, 2, 2018);
+		F1.Mostrar();
+		Fecha F2 = new Fecha(40, 12, 2018);
+		Fecha F3 = new Fecha(1, 1, 2018);
+		F1.EsMayor(F2);
+		F1.EsMayor(F3);
+		
+		//Ejercicio 13
+		Fraccion Fr1= new Fraccion(-2, 5);
+		Fraccion Fr2= new Fraccion(1);
+		Fr1.Mostrar();
+		Fr2.Mostrar();
+		Fr1.Suma(Fr2).Mostrar();
+		Fr1.Resta(Fr2).Mostrar();
+		Fr1.Multipl(Fr2).Mostrar();
+		Fr1.Division(Fr2).Mostrar();
 	}
 
 }
