@@ -12,13 +12,14 @@ public class Complejo {
 		a = x;
 		b = y;
 	}
-	public  void Multipl (Complejo C2) {
+	public Complejo Multipl (Complejo C2) {
 		int n;
 		int m;
-		m = a;
-		n = b;
-		a = (m * C2.a) + (m * C2.b);
-		b = n * C2.a + n * C2.b;
+
+		m = (a * C2.a) + (a * C2.b);
+		n = b * C2.a + b * C2.b;
+		Complejo C3 = new Complejo(m, n);
+		return C3;
 
 	}
 	public Complejo Suma(int w, int z) {

@@ -44,7 +44,7 @@ public class pruebasPractica6 {
 		Complejo C1 = new Complejo(2,5);
 		Complejo C2 = new Complejo(3,4);
 		
-		C1.Multipl(C2);
+		C1.Multipl(C2).Mostrar();
 		C1.Mostrar();
 		
 		C1.Suma(3.1f, 1.2f).Mostrar();
