@@ -8,17 +8,34 @@ Implementar esta clase a partir de la implementación de la clase Punto
 */
 
 public class Vector3D {
-	private float x;
+	private float x; // Lo correcto seria Protected
 	private float y;
 	private float z;
+	
+	//publi class Punto{
+	  /* Protected float x;
+	   * protected float y;
+	   * Public Punto(x, y){
+	   * this.x = x;
+	   * this.y = y;
+	   * }*/
 	
 	public Vector3D (float m, float n, float o){
 		x = m;
 		y = n;
 		z = o;
 	}
-	public Vector3D (float m) {
-		this(m, m, m);
+	
+	/*public class Vector#D extends Punto{
+	 *  private float z;
+	 *  super();
+	 *  this.x = x;   super(x,y);
+	 *  this.y = y    this.z = z;
+	 *  this.z = z;
+	 *  }*/
+	
+	public Vector3D (float o) {
+		this(o, o, o);
 	}
 	
 	public void Coordenadas() {

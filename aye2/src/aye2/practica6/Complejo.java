@@ -16,8 +16,8 @@ public class Complejo {
 		int n;
 		int m;
 
-		m = (a * C2.a) + (a * C2.b);
-		n = b * C2.a + b * C2.b;
+		m = (a * C2.a) + (b * C2.b);
+		n = b * C2.a + b * C2.a;
 		Complejo C3 = new Complejo(m, n);
 		return C3;
 

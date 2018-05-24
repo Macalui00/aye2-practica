@@ -33,8 +33,8 @@ public class Fraccion {
 			}
 		}else {
 			y = b * F2.b;
-			w = b * a;
-			z = F2.b * F2.a; //dudas
+			w = F2.b * a;
+			z = b * F2.a; //dudas
 			m = w + z;
 			n = y;
 			if (m % n == 0) {
@@ -60,8 +60,8 @@ public class Fraccion {
 			}
 		} else {
 			int y = b * F2.b;
-			int w = b * a;
-			int z = F2.b * F2.a;
+			int w = F2.b * a;
+			int z = b * F2.a;
 			m = w - z;
 			n = y;
 			if (m % n == 0) {

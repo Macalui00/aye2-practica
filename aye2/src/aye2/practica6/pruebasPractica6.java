@@ -68,6 +68,23 @@ public class pruebasPractica6 {
 		Fr1.Resta(Fr2).Mostrar();
 		Fr1.Multipl(Fr2).Mostrar();
 		Fr1.Division(Fr2).Mostrar();
+		
+		//ejercicio 14
+		Ecuacion Ec = new Ecuacion(2.0f, 0f, -4.0f);
+		Ec.Raices(Ec);
+		
+		//ejercicio 15
+		Potencia P = new Potencia(3.0f, 4);
+		float r = P.Evaluar(P);
+		System.out.println("el resultado es:" + r);
+		
+		//ejercicio 17
+		
+		Monedero M = new Monedero(500.0f);
+		M.AgregarDinero(23.0f);
+		M.DineroActual();
+		M.SacarDinero(23.0f);
+		M.DineroActual();
 	}
 
 }
