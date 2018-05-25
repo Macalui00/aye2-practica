@@ -69,4 +69,8 @@ public class Fecha {
 			 }
 		 }
 	 }
+	 @Override
+	  public String toString() {
+	  	return "Fecha" + String.format("%02d/%02d/%02d", dia, mes, año);
+	  }
 }

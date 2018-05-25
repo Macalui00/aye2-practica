@@ -64,10 +64,14 @@ public class pruebasPractica6 {
 		Fraccion Fr2= new Fraccion(1);
 		Fr1.Mostrar();
 		Fr2.Mostrar();
-		Fr1.Suma(Fr2).Mostrar();
-		Fr1.Resta(Fr2).Mostrar();
-		Fr1.Multipl(Fr2).Mostrar();
-		Fr1.Division(Fr2).Mostrar();
+		//Fr1.Suma(Fr2).Mostrar();
+		System.out.println("La suma de la fraccion 1 y 2 es de:" + Fr1.Suma(Fr2));
+		//Fr1.Resta(Fr2).Mostrar();
+		System.out.println("La resta de la fracion 1 y 2 es de:" + Fr1.Resta(Fr2));
+		//Fr1.Multipl(Fr2).Mostrar();
+		System.out.println("La multiplicacion entre la fraccion 1 y 2 es de:" + Fr1.Multipl(Fr2));
+		//Fr1.Division(Fr2).Mostrar();
+		System.out.println("La division entre fraccion 1 y 2 es de:" + Fr1.Division(Fr2));
 		
 		//ejercicio 14
 		Ecuacion Ec = new Ecuacion(2.0f, 0f, -4.0f);
@@ -77,6 +81,14 @@ public class pruebasPractica6 {
 		Potencia P = new Potencia(3.0f, 4);
 		float r = P.Evaluar(P);
 		System.out.println("el resultado es:" + r);
+		
+		// ejercicio 16) a)
+		String d = new String("24");
+		Decimal D = new Decimal(d);
+		System.out.println(D.aBinario());
+		String b = new String("10111");
+		Binario B = new Binario(b);
+		System.out.println(B.aDecimal());
 		
 		//ejercicio 17
 		

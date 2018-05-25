@@ -18,12 +18,9 @@ public class Fraccion {
 	public Fraccion Suma(Fraccion F2) {
 		int m;
 		int n;
-		int x;
-		int y;
-		int w;
-		int z;
+
 		if (b == F2.b) {
-			x = a + F2.a;
+			int x = a + F2.a;
 			if (x % b == 0) {
 				m = x % b;
 				n = b % b;
@@ -32,9 +29,10 @@ public class Fraccion {
 				n = b;
 			}
 		}else {
-			y = b * F2.b;
-			w = F2.b * a;
-			z = b * F2.a; //dudas
+			
+			int y = b * F2.b;
+			int w = F2.b * a;
+			int z = b * F2.a; //dudas
 			m = w + z;
 			n = y;
 			if (m % n == 0) {
@@ -107,4 +105,8 @@ public class Fraccion {
 	public void Mostrar() {
 		System.out.println(a + "/" + b);
 	}
+	@Override
+	  public String toString() {
+	  	return "Fraccion:" + String.format("%d/%d", a, b);
+	  }
 }
