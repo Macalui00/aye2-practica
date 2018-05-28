@@ -1,6 +1,7 @@
 package practica7;
 import java.util.Date;
 import java.util.Optional;
+import java.util.Scanner;
 
 public abstract class Persona {
 	protected String nombre;   // las que son objetos, se inicializan en null
@@ -58,9 +59,18 @@ public abstract class Persona {
 	}*/
 	
 	// el tiene pareja se podria trabajar como:
-	public boolean tienePareja() {
+	public boolean TienePareja(){
 		return pareja2.isPresent(); //is Just()
 	}
 	
 	public abstract int getIngresos(); //Solo la firma
+	
+	public void leer() {
+		Scanner s = new Scanner(System.in);
+		System.out.println("ingrese nomnre de la persona: ");
+		nombre = s.nextLine();
+	}
+	public void mostrar() {
+		System.out.println(nombre);
+	}
 }

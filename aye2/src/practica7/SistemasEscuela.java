@@ -1,6 +1,7 @@
 package practica7;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class SistemasEscuela {
 	private final static int LONGITUD_ARREGLO = 5;
@@ -24,7 +25,7 @@ public class SistemasEscuela {
 		ArrayList<Persona> aPersona2 = new ArrayList<>();
 		aPersona2.add(new Empleado());
 		aPersona2.add(new Empleado());
-		aPersona2.addAll(new Empleado());
+		aPersona2.add(new Empleado());
 		
 		for (int i = 0; i < aPersona2.size(); i++) {
 			System.out.println(i + ": " + aPersona2.get(i));
@@ -43,7 +44,9 @@ public class SistemasEscuela {
 		ArrayList<? extends Persona> per2;
 		per2 = emp1; //aca si es covariante, se puede decir qeu ArrayList<Empleado> es SUBTIPO de ArrayList<? extends Persona>
 		
-		
+		Empleado empl = new Empleado();
+		empl.leer();
+		empl.mostrar();	
 	}
-
+	
 }
