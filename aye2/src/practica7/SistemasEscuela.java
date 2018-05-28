@@ -47,6 +47,30 @@ public class SistemasEscuela {
 		Empleado empl = new Empleado();
 		empl.leer();
 		empl.mostrar();	
+		
+		aPersona2.get(0).leer();
+		aPersona2.get(0).mostrar();
+		
+		// RAW Types
+		ArrayList listaRaw = new ArrayList();
+		listaRaw.add(new Integer(10));
+		listaRaw.add(new String("pepe"));
+		
+		ArrayList<Integer> listaInt = new ArrayList<>();
+		
+		System.out.println(listaRaw.getClass());
+		System.out.println(listaInt.getClass());
+		
+		
+		for (Object x : listaRaw) {
+			System.out.println(x);
+		}
+		
+		for(Integer x: (ArrayList<Integer>) listaRaw) {
+			if (x instanceof Integer) { //Esto lo deberia hacer afuera, pero no puedo hacerlo tampoco
+				System.out.println(x);
+			}
+		}
 	}
 	
 }
