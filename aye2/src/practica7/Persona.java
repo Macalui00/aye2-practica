@@ -67,7 +67,7 @@ public abstract class Persona {
 	
 	public void leer() {
 		Scanner s = new Scanner(System.in);
-		System.out.println("ingrese nomnre de la persona: ");
+		System.out.println("ingrese nombre de la persona: ");
 		nombre = s.nextLine();
 	}
 	public void mostrar() {
