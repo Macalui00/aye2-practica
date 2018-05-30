@@ -1,10 +1,14 @@
 package Practica8;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Grafo<V> {
-	private ArrayList<Nodo<V>> nodos;
+public interface Grafo<V> {
+	
+	public void addNodo(V v);
+	public void addArista(V vorig, V vdest);
+	public ArrayList<Nodo<V>> obtenerVecinos(Nodo<V> vertice);
+	
+	/*private ArrayList<Nodo<V>> nodos;
 	private ArrayList<Arista<V>> aristas;
 	
 	public Grafo(){
@@ -70,5 +74,5 @@ public class Grafo<V> {
 		}
 		return vecinos;
 	}
-	
+	*/
 }
