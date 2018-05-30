@@ -1,11 +1,11 @@
 package practica7;
 
 public abstract class Animal {
-	private String nombre;
-	private String habitat;
-	private int cantEjemplares;
-	private int edad;
-	private CaracteristicaEspecie Caracteristicas;
+	protected String nombre;
+	protected String habitat;
+	protected int cantEjemplares;
+	protected int edad;
+	protected CaracteristicaEspecie Caracteristicas;
 	
 	public Animal() {
 		nombre = "";

@@ -1,12 +1,11 @@
 package practica7;
 
-public class Especie {
+public class Especie extends Familia{
 	private String nombreE;
-	private CaracteristicaEspecie CaractEsp;
+	private CaracteristicaEspecie CaractEsp = new CaracteristicaEspecie();
 	
 	public Especie() {
 		nombreE = "";
-		CaracteristicaEspecie CaractEsp = new CaracteristicaEspecie();
 	}
 	public Especie(String N, CaracteristicaEspecie CE) {
 		nombreE = N;
@@ -23,6 +22,14 @@ public class Especie {
 	}
 	public void setCaractEsp(CaracteristicaEspecie caractEsp) {
 		CaractEsp = caractEsp;
+	}
+	@Override
+	public String getEspecie() {
+		return nombreE;
+	}
+	@Override
+	public CaracteristicaEspecie getEspCaract() {
+		return CaractEsp;
 	}
 	
 	

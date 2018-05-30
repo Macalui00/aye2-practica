@@ -4,22 +4,25 @@ import java.util.ArrayList;
 
 public abstract class Familia extends Categoria{
 	private String nombreF;
-	private ArrayList<Especie> especies;
+	private ArrayList<Especie> especies = new ArrayList<>();
 	
 	public Familia() {
+		super();
 		nombreF = "";
-		ArrayList<Especie> especies = new ArrayList<>();
 	}
 	public Familia(String NF, ArrayList<Especie> esp) {
+		super();
 		nombreF = NF;
 		especies = esp;
 	}
-	public String getNombreF() {
+	@Override
+	public String getFamiliaNombre() {
 		return nombreF;
 	}
 	public void setNombreF(String nombreF) {
 		this.nombreF = nombreF;
 	}
+	@Override
 	public ArrayList<Especie> getEspecies() {
 		return especies;
 	}

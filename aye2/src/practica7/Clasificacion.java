@@ -1,13 +1,15 @@
 package practica7;
 
 public abstract class Clasificacion extends Animal{
-	private String clasificacion;
+	protected String clasificacion;
 	
 	public Clasificacion() {
+		super();
 		clasificacion = "";
 	}
 	
 	public Clasificacion(String C) {
+		super();
 		clasificacion = C;
 	}
 	

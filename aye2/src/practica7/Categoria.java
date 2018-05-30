@@ -7,10 +7,12 @@ public abstract class Categoria extends Clasificacion {
 	protected CaractCat Caractcat = new CaractCat();
 	
 	public Categoria() {
+		super();
 		categoria = "";
 	}
 	
 	public Categoria(String Cat, CaractCat Car) {
+		super();
 		categoria = Cat;
 		Caractcat = Car;
 	}
