@@ -1,12 +1,14 @@
 package practica7;
 
+import java.util.ArrayList;
+
 public abstract class Familia extends Categoria{
 	private String nombreF;
 	private ArrayList<Especie> especies;
 	
 	public Familia() {
 		nombreF = "";
-		ArrayList<Especie> especies = new Arraylist<>();
+		ArrayList<Especie> especies = new ArrayList<>();
 	}
 	public Familia(String NF, ArrayList<Especie> esp) {
 		nombreF = NF;

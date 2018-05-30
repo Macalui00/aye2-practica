@@ -3,12 +3,11 @@ package practica7;
 import java.util.ArrayList;
 
 public abstract class Categoria extends Clasificacion {
-	private String categoria;
-	private CaractCat Caractcat;
+	protected String categoria;
+	protected CaractCat Caractcat = new CaractCat();
 	
 	public Categoria() {
 		categoria = "";
-		CaractCat Caractcat = new CaractCat();
 	}
 	
 	public Categoria(String Cat, CaractCat Car) {

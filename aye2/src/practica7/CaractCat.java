@@ -1,10 +1,10 @@
 package practica7;
 
 public class CaractCat {
-	private String CuerpoCubierto; //"de pelo", "de escamas", "caparazon", "piel humeda", "plumas"
-	private String NacenDe; //"vientre materno", "huevos"
-	private String Extremidades; // "patas", "aletas", "alas y patas", "tienen o no"
-	private String Desplazamiento; // caminan, nadan, vuelan, reptan o caminan
+	protected String CuerpoCubierto; //"de pelo", "de escamas", "caparazon", "piel humeda", "plumas"
+	protected String NacenDe; //"vientre materno", "huevos"
+	protected String Extremidades; // "patas", "aletas", "alas y patas", "tienen o no"
+	protected String Desplazamiento; // caminan, nadan, vuelan, reptan o caminan
 	
 	public CaractCat() {
 		CuerpoCubierto = "";
