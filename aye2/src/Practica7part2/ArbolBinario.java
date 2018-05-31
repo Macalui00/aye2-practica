@@ -138,6 +138,19 @@ public class ArbolBinario<T extends Comparable<T>> implements Comparable<ArbolBi
 		for(Object x : lista) {
 			System.out.println((Integer) x);
 		}
+		
+		/*
+		 * for(Object x : lista) {
+		 * downcasting object --> integer
+		 * x = (integer) x + 10;
+		 * llama al x.toString()
+		 * mediante binding dinamico se llama al tostring de integer
+		 * porque dentro de x hay una instancia de objeto de tipo Integer
+		 * system.out.println(x);
+			System.out.println(x);
+		}*/
+		
+		//otra manera es (desde llama al... hasta el system.out.println fuera del for.
 		System.out.println("Altura: " + arbol.altura());
 	}
 	
