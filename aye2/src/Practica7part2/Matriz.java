@@ -1,7 +1,7 @@
 package Practica7part2;
 
 public class Matriz extends Numero{
-	private int[][] mat;
+	private int[][] mat; //muchas dudas
 	
 	public Matriz(int a, int b) {
 		this.n1 = a;
