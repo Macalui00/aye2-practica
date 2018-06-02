@@ -1,18 +1,13 @@
 package Practica7part2;
 
 public class Cola<T> extends Lista<T>{
-	
+
 	public Cola() {
 		super();
 	}
 	
 	public Cola(T dato) {
 		super(dato);
-	}
-
-	@Override
-	public int compareTo(Lista<T> o) {
-		return head.compareTo(o.getHead);
 	}
 	
 	@Override
@@ -46,14 +41,4 @@ public class Cola<T> extends Lista<T>{
 		}
 	}
 	
-	
-	/*if (head == null) {
-		head = dato;
-	} else {
-		if (tail == null) {
-			tail = new Lista<T>(dato);
-		} else {
-			tail.agregarElemento(dato);
-		}
-	}*/
 }

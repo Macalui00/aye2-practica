@@ -31,4 +31,8 @@ public abstract class Lista<T extends Comparable<T>> implements Comparable<Lista
 	public abstract void addElem(T dato);
 	public abstract boolean esVacia(); 
 	public abstract T sacarElem();
+
+	public int compareTo(Lista<T> o) {
+		return head.compareTo(o.getHead());
+	}
 }
