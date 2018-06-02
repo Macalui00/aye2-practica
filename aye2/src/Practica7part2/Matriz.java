@@ -4,18 +4,16 @@ public class Matriz extends Numero{
 	private int[][] mat; //muchas dudas
 	
 	public Matriz(int a, int b) {
-		this.n1 = a;
-		this.n2 = b;
-		mat = new int[a][b];
+		super(a, b);
+		this.mat = new int[a][b];
 	}
 	
 	public Matriz() {
-		this.n1 = 0;
-		this.n2 = 0;
+		super(0, 0);
 	}
 
 	@Override
-	public Numero suma(Matriz numero2) {
+	public Numero suma(Numero numero2) {
 		int i;
 		int j;
 		int[][] m3 = new int[n1][n2];

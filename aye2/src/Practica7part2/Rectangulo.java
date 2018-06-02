@@ -4,7 +4,7 @@ public class Rectangulo extends Cuadrilatero{
 	private double y;
 	
 	public Rectangulo(double a, double b) {
-		this.x = a;
+		super(a);
 		y = b;
 	}
 

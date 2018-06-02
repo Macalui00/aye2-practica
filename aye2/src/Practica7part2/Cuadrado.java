@@ -3,7 +3,7 @@ package Practica7part2;
 public class Cuadrado extends Cuadrilatero{
 	
 	public Cuadrado(double a) {
-		this.x = a;
+		super(a);
 	}
 
 	@Override

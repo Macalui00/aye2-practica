@@ -3,13 +3,11 @@ package Practica7part2;
 public class Fraccion extends Numero{
 
 	public Fraccion(int num1, int num2) {
-		this.n1 = num1;
-		this.n2 = num2;		
+		super(num1, num2);	
 	}
 	
 	public Fraccion(int num1) {
-		this.n1 = num1;
-		this.n2 = 1;
+		super(num1, 1);
 	}
 
 	@Override

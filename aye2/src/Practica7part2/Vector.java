@@ -3,13 +3,11 @@ package Practica7part2;
 public class Vector extends Numero{
 	
 	public Vector(int a, int b) {
-		this.n1 = a;
-		this.n2 = b;
+		super(a, b);
 	}
 	
 	public Vector() {
-		this.n1 = 0;
-		this.n2 = 0;
+		super(0, 0);
 	}
 
 	@Override

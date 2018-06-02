@@ -3,13 +3,11 @@ package Practica7part2;
 public class Complejo extends Numero{
 	
 	public Complejo(int num1, int num2) {
-		this.n1 = num1;
-		this.n2 = num2;
+		super(num1, num2);
 	}
 	
 	public Complejo() {
-		this.n1 = 0;
-		this.n2 = 0;
+		super(0, 0);
 	}
 	
 	@Override
