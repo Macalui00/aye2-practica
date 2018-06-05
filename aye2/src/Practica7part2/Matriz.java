@@ -27,7 +27,7 @@ public class Matriz extends Numero{
 		int i;
 		int j;
 		int[][] m3 = new int[n1][n2];
-		if(numero2 instanceof Matriz) {
+		if(numero2 instanceof Matriz) {     //DOWNCASTING
 			for (i = 0; i < n1; i++) {
 				for (j = 0; j < n2; j++) {
 					m3[i][j] = mat[i][j] + ((Matriz)numero2).mat[i][j];
