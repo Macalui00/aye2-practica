@@ -23,32 +23,47 @@ public class Estanteria {
 		estantes.add(estante);
 	}
 	
-	private void enumerarLibros(ArrayList<Libro> estanteb, ArrayList<ArrayList<Libro>> estantesb) {
+	public void enumerarLibros(ArrayList<Libro> estanteb, ArrayList<ArrayList<Libro>> estantesb) {
 		int numeracion = 1;
 		if (!estantesb.isEmpty()) {
 			ArrayList<Libro> ultimoEstante = estantesb.get(estantesb.size() - 1);
 			Libro ultimoLibro = ultimoEstante.get(ultimoEstante.size() - 1);
+			System.out.println(ultimoLibro.getNombre() + ", numeracion 1: " + ultimoLibro.getNumeracion());
 			numeracion = ultimoLibro.getNumeracion() + 1; 
 			//obtengo la numeracion del ultimo libro de la ultima estanteria y le sumo 1 para el proximo libro
 		}
 		for (Libro l: estanteb) {
 			l.setNumeracion(numeracion);
+			System.out.println(l.getNombre() + ", numeracion 3: " + l.getNumeracion());
 			numeracion = numeracion + 1;
 		}
 	}
 	
 	public void agregarLibro(Libro libro) {
 		if (!(existeLibro(libro))) {
+			int numeracion = 0;
 			if(!estantes.isEmpty()) {
-				ArrayList<Libro> ultimoEstante = estantes.get(estantes.size() - 1);
+				int elemento = estantes.size() - 1;
+				ArrayList<Libro> ultimoEstante = estantes.get(elemento);
+				Libro ultimoLibro = new Libro();
 				if (!ultimoEstante.isEmpty()) {
-					Libro ultimoLibro = ultimoEstante.get(ultimoEstante.size() - 1);
-					int numeracion = ultimoLibro.getNumeracion();
-					libro.setNumeracion(numeracion + 1);
+					ultimoLibro = ultimoEstante.get(ultimoEstante.size() - 1);
+				} else {
+					elemento = elemento - 1;
+					while(elemento > 0 && !estantes.isEmpty() && ultimoEstante.isEmpty()) {
+						ultimoEstante = estantes.get(elemento);	
+					}
+					if (!ultimoEstante.isEmpty()) {
+						ultimoLibro = ultimoEstante.get(ultimoEstante.size() - 1);
+					}
 				}
-				estantes.get(estantes.size() - 1).add(libro);
+				numeracion = ultimoLibro.getNumeracion();
+				libro.setNumeracion(numeracion + 1);
+				estantes.get(estantes.size()-1).add(libro);
+				System.out.println(libro.getNombre() + ", numeracion5: " + libro.getNumeracion());
 			} else {
 				ArrayList<Libro> estante = new ArrayList<>();
+				libro.setNumeracion(1);
 				estante.add(libro);
 				agregarEstante(estante);
 			}
@@ -94,7 +109,7 @@ public class Estanteria {
     	}
 	}
 	
-	public void EliminarLibro(Libro l) {
+	/*public void EliminarLibro(Libro l) {
 		int numero = 0;
 		if (existeLibro(l)) {
 			boolean encontrado = false;
@@ -103,25 +118,54 @@ public class Estanteria {
 				ArrayList<Libro> estante = (ArrayList<Libro>) it.next();
 				Iterator<Libro> it2 = estante.iterator();
 				while(it2.hasNext()) {
-					Libro libroEncontrado = (Libro)it2.next();
-					if (l.sonIguales(libroEncontrado)) {
+					Libro libroActual = it2.next();
+					if (libroActual.sonIguales(l)) {
 						encontrado = true;
-						if (libroEncontrado != null) {
-							numero = libroEncontrado.getNumeracion();
-							estante.remove(libroEncontrado);
-							it2 = estante.iterator();
-						}
+						numero = libroActual.getNumeracion();
+						System.out.println(libroActual.getNombre() + ", numeracion: " + libroActual.getNumeracion());
+						estante.remove(libroActual);
 					} else {
 						if (encontrado) {
-							System.out.println(libroEncontrado + ", numeracion: " + libroEncontrado.getNumeracion());
-							libroEncontrado.setNumeracion(numero - 1);
-							it2 = estante.iterator();
-							System.out.println(libroEncontrado.getNombre() + ", numeracion: " + libroEncontrado.getNumeracion());
+							System.out.println(libroActual.getNombre() + ", numeracion: " + libroActual.getNumeracion());
+							it2.next().setNumeracion(numero - 1);
+							numero = numero - 1;
+							System.out.println(libroActual.getNombre() + ", numeracion: " + libroActual.getNumeracion());
 						}
 					}
 				}
     		
 			}
+		} else {
+			System.out.println("No se encontró el libro en las estanterias.");
+		}
+	}*/
+	
+	public void EliminarLibro(Libro l) {
+
+		if (existeLibro(l)) {
+			Libro libroEncontrado = new Libro();
+			ArrayList<Libro> estanteEncontrado = new ArrayList<>();
+			boolean encontrado = false;
+			int numero = 0;
+			for(ArrayList<Libro> estante: estantes) {
+				for(Libro libroActual: estante) {
+					if (libroActual.sonIguales(l)) {
+						encontrado = true;
+						numero = libroActual.getNumeracion();
+						System.out.println(libroActual.getNombre() + ", numeracion: " + libroActual.getNumeracion());
+						libroEncontrado = libroActual;
+						estanteEncontrado = estante;
+					} else {
+						if (encontrado) {
+							System.out.println(libroActual.getNombre() + ", numeracion: " + libroActual.getNumeracion());
+							libroActual.setNumeracion(numero);
+							numero = numero - 1;
+							System.out.println(libroActual.getNombre() + ", numeracion: " + libroActual.getNumeracion());
+						}
+					}
+				}
+			}
+			estanteEncontrado.remove(libroEncontrado);
 		} else {
 			System.out.println("No se encontró el libro en las estanterias.");
 		}
@@ -139,7 +183,7 @@ public class Estanteria {
 		Estanteria estanteria = new Estanteria(estantes);
 		estanteria.agregarEstante(estante);
 		estanteria.agregarEstanteVacio();
-		estanteria.agregarLibro(l3);
+		estanteria.agregarLibro(l3);  //l3 es IGUAL a l2 : por eso dice Libro ya existente.
 		estanteria.agregarLibro(l3);
 		estanteria.agregarLibro(l4);
 		estanteria.EliminarLibro(l2);

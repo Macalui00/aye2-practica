@@ -8,6 +8,11 @@ public class Libro {
 	private int numeracion;    //en orden
 	
 	public Libro() {
+		this.nombre = "";
+		this.autor = "";
+		this.editorial = "";
+		this.añoPublicacion = 0;
+		this.numeracion = 0;
 	}
 	
 	public Libro(String n, String a, String e, int año) {
