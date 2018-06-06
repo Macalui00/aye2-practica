@@ -56,7 +56,7 @@ public class ArbolBinarioHoja<T, H> {
 		} else if(sd == null) {
 			sd = new ArbolBinarioHoja<T, H>(e);
 		} else {
-			if (altura(si) > altura(sd)) {
+			if (si.altura() > sd.altura()) {
 				sd.insertar(e);
 			} else {
 				si.insertar(e);
@@ -79,6 +79,5 @@ public class ArbolBinarioHoja<T, H> {
 			return 1 + Math.max(alturaI, alturaD);
 		}
 	}
-	
 	
 }
