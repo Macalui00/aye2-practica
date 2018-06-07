@@ -81,6 +81,8 @@ public class pruebasPractica6 {
 		Potencia P = new Potencia(3.0f, 4);
 		float r = P.Evaluar(P);
 		System.out.println("el resultado es:" + r);
+		float m = 0.5f;
+		float n = 0.6f;
 		
 		// ejercicio 16) a)
 		String d = new String("24");
@@ -97,6 +99,7 @@ public class pruebasPractica6 {
 		M.DineroActual();
 		M.SacarDinero(23.0f);
 		M.DineroActual();
+		
 	}
 
 }
