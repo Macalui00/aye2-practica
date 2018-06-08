@@ -14,13 +14,13 @@ public class VectorPila implements Pila{
 	public VectorPila(int tamaño, int[] elementos) {
 		this.tamaño = tamaño;
 		this.tope = elementos.length;
-		int[] pila = new int[tamaño];
+		this.pila = new int[tamaño];
 		this.pila = elementos;
 	}
 	
 	public void setPila(int tamaño) {
 		this.tamaño = tamaño;
-		int[] pila = new int[tamaño];
+		this.pila = new int[tamaño];
 	}
 
 	@Override
