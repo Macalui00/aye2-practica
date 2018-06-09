@@ -7,15 +7,20 @@ public class Fraccion {
 	private int a;
 	private int b;
 	
-	public Fraccion(int x, int y) {
-		a = x;
-		b = y;
+	public Fraccion(int x, int y) throws Exception {
+		if(y == 0) {
+			System.out.println("El divisor no puede ser 0.");
+			throw new DivisorIncorrectoError("El divisor No puede ser 0");
+		}
+		this.a = x;
+		this.b = y;
 	}
+	
 	public Fraccion(int z) {
 		a = z;
 		b = 1;
 	}
-	public Fraccion Suma(Fraccion F2) {
+	public Fraccion Suma(Fraccion F2) throws Exception {
 		int m;
 		int n;
 
@@ -40,11 +45,12 @@ public class Fraccion {
 				n = n % n;
 			}
 		}
-		Fraccion F3 = new Fraccion(m, n);
+		Fraccion F3;
+		F3 = new Fraccion(m, n);
 		return F3;
 	}
 	
-	public Fraccion Resta(Fraccion F2) {
+	public Fraccion Resta(Fraccion F2) throws Exception {
 		int m;
 		int n;
 		if (b == F2.b) {
@@ -70,7 +76,7 @@ public class Fraccion {
 		Fraccion F3 = new Fraccion(m, n);
 		return F3;
 	}
-	public Fraccion Multipl(Fraccion F2) {
+	public Fraccion Multipl(Fraccion F2) throws Exception {
 		int x;
 		int y;
 		int m;
@@ -87,7 +93,7 @@ public class Fraccion {
 		Fraccion F3 = new Fraccion(m, n);
 		return F3;
 	}
-	public Fraccion Division(Fraccion F2) {
+	public Fraccion Division(Fraccion F2) throws Exception {
 		int x;
 		int y;
 		if (F2.a < 0) {

@@ -2,7 +2,7 @@ package aye2.practica6;
 
 public class pruebasPractica6 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Lamparita lamp1 = new Lamparita();
 		System.out.println("La Lamparita esta" + lamp1.getEstado().toString());
 		
@@ -62,6 +62,7 @@ public class pruebasPractica6 {
 		//Ejercicio 13
 		Fraccion Fr1= new Fraccion(-2, 5);
 		Fraccion Fr2= new Fraccion(1);
+		Fraccion Fr3= new Fraccion(3, 0);
 		Fr1.Mostrar();
 		Fr2.Mostrar();
 		//Fr1.Suma(Fr2).Mostrar();
