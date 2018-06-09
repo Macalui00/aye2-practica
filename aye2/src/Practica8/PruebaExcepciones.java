@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class PruebaExcepciones {
 	private static final int SIZE_ARREGLO = 10;
 	private static Integer[] arregloInt;
+	private static Scanner tecladoMain;
 	
 	public static void ingresarDatoArray(int indice) {//metodo q la lanza
 		try{
@@ -50,8 +51,8 @@ public class PruebaExcepciones {
 		return indice;
 	}
 	public static int leerIndice2() {
-		
-		return tecladoMain.nextInt();
+		tecladoMain = new Scanner(System.in);
+		return tecladoMain .nextInt();
 	}
 	public static void main(String[] args) {
 		Scanner tecladoMain;
@@ -64,10 +65,11 @@ public class PruebaExcepciones {
 		try {
 			int indice = leerIndice2();
 			ingresarDatoArray2(indice);
-		}catch(MiAppException e) {
+		} catch (MiAppException e) {
 			System.out.println(e);
 		}catch (InputMismatchException e) {
 		tecladoMain.close();
 		System.out.println("Termina OK");
+		}
 	}
 }

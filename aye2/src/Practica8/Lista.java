@@ -1,7 +1,5 @@
 package Practica8;
 
-import java.util.ArrayList;
-
 public class Lista<T extends Comparable<T>> implements Comparable<Lista<T>> {
 	private T head;
 	private Lista<T> tail;
@@ -101,7 +99,6 @@ public class Lista<T extends Comparable<T>> implements Comparable<Lista<T>> {
 				contador = contador - 1;
 			} 
 		}
-		
 		if (menor.compareTo(head) > 0) {
 			T adicional = menor;
 			menor = head;
@@ -123,11 +120,11 @@ public class Lista<T extends Comparable<T>> implements Comparable<Lista<T>> {
 		
 		enteros.ordenar();
 		while(enteros.getTail() != null) {
-			System.out.println(enteros.getHead());
+			System.out.println((int)enteros.getHead());
 			enteros.setTail(enteros.getTail().getTail());
 		}
 		if (enteros.getHead() != null) {
-			System.out.println(enteros.getHead());
+			System.out.println((int)enteros.getHead());
 		}
 	}
 }

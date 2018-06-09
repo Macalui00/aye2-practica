@@ -1,9 +1,9 @@
 package Practica8;
 
-public class MiAppException {
+public class MiAppException extends Exception{
 	
 	public MiAppException(String msg, Throwable e) {
-		super( msg , e);
+		super(msg, e);
 	}
 
 }
