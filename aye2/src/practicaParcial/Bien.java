@@ -4,14 +4,21 @@ public class Bien {
 	private Titular titular;
 	private float valorMercado;
 	private float valorFiscal;
+	private int codigo;
+	
+	private static int proximoCodigo  = 0;
 	
 	public Bien() {
+		codigo = proximoCodigo;
+		proximoCodigo++;
 	}
 	
 	public Bien(Titular titular, float valorMercado, float valorFiscal) {
 		this.titular = titular;
 		this.valorFiscal = valorFiscal;
 		this.valorMercado = valorMercado;
+		codigo = proximoCodigo;
+		proximoCodigo++;
 	}
 
 	public Titular getTitular() {
@@ -29,7 +36,10 @@ public class Bien {
 		return valorMercado;
 	}
 
-	public void setValorMercado(float valorMercado) {
+	public void setValorMercado(float valorMercado) throws ValorInvalidoException {
+		if(valorMercado < 0) {
+			throw new ValorInvalidoException("El valor de mercado insertado es inválido.");
+		}
 		this.valorMercado = valorMercado;
 	}
 
@@ -37,11 +47,15 @@ public class Bien {
 		return valorFiscal;
 	}
 
-	public void setValorFiscal(float valorFiscal) {
+	public void setValorFiscal(float valorFiscal) throws ValorInvalidoException {
+		if (valorFiscal < 0) {
+			throw new ValorInvalidoException("El valor fiscal ingresado es incorrecto.");
+		}
 		this.valorFiscal = valorFiscal;
 	}
 	
-	
-	
+	public int getCodigo() {
+		return codigo;
+	}
 	
 }
