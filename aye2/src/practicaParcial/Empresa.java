@@ -77,4 +77,46 @@ public class Empresa {
 			}
 		}
 	}
+	
+	public static void main(String[] args) {
+		Empresa empresa;
+		empresa = Empresa.getEmpresa();
+		
+		List<Bien> bienes = new ArrayList<>();
+		Titular t1 = new Titular("Mario", "Herrero");
+		t1.setDireccion("m203");
+		Titular t2 = new Titular("Juan", "Pereira");
+		t2.setDireccion("m403");
+		Titular t3 = new Titular("Natalia", "Flores");
+		t3.setDireccion("m332");
+		Titular t4 = new Titular("Florencia", "Herrero");
+		try {
+			Cuenta cuenta = new Cuenta(t2, 200, 400);
+			Automotor autom1 = new Automotor(t1, 120, 220);
+			autom1.setAlicuota(20);
+			autom1.setPrima(100);
+			Automotor autom2 = new Automotor();
+			autom2.setTitular(t2);
+			autom2.setValorFiscal(100);
+			autom2.setValorMercado(200);
+			autom2.setAlicuota(4);
+			autom2.setPrima(102);
+			empresa.agregarBien(cuenta);
+			empresa.agregarBien(autom1);
+			empresa.agregarBien(autom2);
+			cuenta.transferir(t3);
+		} catch(TitularVacioException e) {
+			System.out.println("El titular insertado esta vacio.");
+		} catch(ValorInvalidoException e) {
+			System.out.println("El valor ingresado es invalido");
+		} catch (AlicuotaException e) {
+			System.out.println("La alicuota insertada es invalida.");
+		} catch (PrimaInvalidaException e) {
+			System.out.println("La prima insertada es invalida.");
+		} catch (SistemaEmpresaException e) {
+			System.out.println("Error al enviar mail.");
+		}
+		
+		
+	}
 }

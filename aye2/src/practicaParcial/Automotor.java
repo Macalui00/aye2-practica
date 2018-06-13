@@ -13,7 +13,7 @@ public class Automotor extends Bien implements Asegurable, Transferible, Gravabl
 	}
 	
 	@Override
-	public void getAlicuota(float alicuota) throws AlicuotaException{
+	public void setAlicuota(float alicuota) throws AlicuotaException{
 		if(alicuota < 0 || alicuota >= valorMercado) {
 			throw new AlicuotaException("Alicuota Invalida");
 		}

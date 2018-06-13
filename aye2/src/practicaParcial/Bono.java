@@ -12,7 +12,7 @@ public class Bono extends Bien implements Transferible, Gravable {
 	}
 	
 	@Override
-	public void getAlicuota(float alicuota) throws AlicuotaException {
+	public void setAlicuota(float alicuota) throws AlicuotaException {
 		if(alicuota < 0 || alicuota >= valorMercado) {
 			throw new AlicuotaException("Alicuota Invalida");
 		}
