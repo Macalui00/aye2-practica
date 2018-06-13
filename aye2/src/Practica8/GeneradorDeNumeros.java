@@ -1,6 +1,7 @@
 package Practica8;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /*Definir una clase GeneradorDeNumeros, que a partir de un valor inicial, un valor final
@@ -9,42 +10,17 @@ import java.util.List;
  *La clase GeneradorDeNumeros deberá implementar las interfaces Iterator<Integer> y List<Integer>.*/
 
 public class GeneradorDeNumeros {
-	private int valorInicial;
-	private int valorFinal;
-	private int incremento;
+	List<Integer> enteros;
 	
 	public GeneradorDeNumeros() {
 	}
 	
 	public GeneradorDeNumeros(int valI, int valF, int inc) {
-		this.valorInicial = valI;
-		this.valorFinal = valF;
-		this.incremento = inc;
+		this.enteros = new ArrayList<Integer>();
+		this.enteros = obtemerListaNumeros();
 	}
 	
-	public int getValorInicial() {
-		return valorInicial;
-	}
-
-	public void setValorInicial(int valorInicial) {
-		this.valorInicial = valorInicial;
-	}
-
-	public int getValorFinal() {
-		return valorFinal;
-	}
-
-	public void setValorFinal(int valorFinal) {
-		this.valorFinal = valorFinal;
-	}
-
-	public int getIncremento() {
-		return incremento;
-	}
-
-	public void setIncremento(int incremento) {
-		this.incremento = incremento;
-	}
+	
 
 	public List<Integer> obtenerListaNumeros(){
 		if (valorInicial > valorFinal) {
@@ -64,6 +40,18 @@ public class GeneradorDeNumeros {
 	}
 	
 	private List<Integer> ordenarLista(List<Integer> valores){
-		
+		Iterator<Integer> itent = new valores.iterator();
+		List<Integer> valfinal = new ArrayList<>();
+		if(itent.hasNext()) {
+			Integer m = itent.next();
+			valfinal.add(m);
+			Integer n;
+			while(itent.hasNext()) {
+				n = itent.next();
+				if (n > m) {
+					
+				}
+			}
+		}
 	}
 }
