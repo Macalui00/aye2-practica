@@ -27,6 +27,9 @@ public class Empresa {
 		if(pertenece(bien, bienes)) {
 			throw new BienInvalidoException("Bien ya existente");
 		}
+		if (!esBienValido()) {
+			throw new BienInvalidoException("Bien de tipo inexistente");
+		}
 		this.bienes.add(bien);
 	}
 

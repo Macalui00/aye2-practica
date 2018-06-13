@@ -1,6 +1,6 @@
 package practicaParcial;
 
-public class Bien {
+public abstract class Bien {
 	private Titular titular;
 	private float valorMercado;
 	private float valorFiscal;
