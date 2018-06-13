@@ -49,4 +49,8 @@ public class Titular {
 		this.dni = dni;
 	}
 	
+	public boolean equals(Titular titular) {
+		return this.getApellido() == titular.getApellido() && this.getNombre() == titular.getNombre();
+	}
+	
 }

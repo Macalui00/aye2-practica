@@ -27,10 +27,17 @@ public class Empresa {
 		if(pertenece(bien, bienes)) {
 			throw new BienInvalidoException("Bien ya existente");
 		}
-		if (!esBienValido()) {
+		if (!esBienValido(bien)) {
 			throw new BienInvalidoException("Bien de tipo inexistente");
 		}
 		this.bienes.add(bien);
+	}
+	
+	private boolean esBienValido(Bien bien) {
+		if ((bien instanceof Automotor) || (bien instanceof Cuenta)) {
+			return true;
+		}
+		return false;
 	}
 
 	private boolean pertenece(Bien bien, List<Bien> bienes2) {
@@ -50,7 +57,7 @@ public class Empresa {
 			throw new BienInvalidoException("Bien no existente");
 		}
 	}
-	public void notificarTransferencia(Titular titular1, Titular titular2) throws SistemaEmpresaException {
+	public static void notificarTransferencia(Titular titular1, Titular titular2) throws SistemaEmpresaException {
 		if (titular2 == null) {
 			throw new TitularVacioException();
 		}

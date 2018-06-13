@@ -61,4 +61,5 @@ public abstract class Bien {
 	public boolean equals(Bien bien) {
 		return this.getCodigo() == bien.getCodigo();
 	}
+
 }
