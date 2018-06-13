@@ -66,4 +66,15 @@ public class Empresa {
 		}
 		System.out.println("Enviar mail al titular anterior" + titular1.getNombre() + " de cambio alñ nuevo titular " + titular2.getNombre());
 	}
+	
+	public void mostrarBienesTitular(Titular titular) {
+		for(Bien b: bienes) {
+			if(b.getTitular().equals(titular)) {
+				System.out.println("tipo de bien: ");
+				System.out.println(b.getClass());
+				System.out.println("Codigo: ");
+				System.out.println(b.getCodigo());
+			}
+		}
+	}
 }

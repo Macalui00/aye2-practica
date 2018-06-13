@@ -1,6 +1,14 @@
 package practicaParcial;
 
 public class Cuenta extends Bien implements Transferible {
+	
+	public Cuenta() {
+		super();
+	}
+	
+	public Cuenta(Titular titular, float valorMercado, float valorFiscal) {
+		super(titular, valorMercado, valorFiscal);
+	}
 
 	@Override
 	public void transferir(Titular titular) throws SistemaEmpresaException {
