@@ -22,8 +22,10 @@ public class Automotor extends Bien implements Asegurable, Transferible, Gravabl
 		if(this.getTitular().equals(titular)) {
 			throw new TitularInvalidoException("Es el mismo titular");
 		}
-		if(titular == null) {
-			throw new TitularVacioException();
+		try {
+			this.titular = titular;
+		} catch(TitularVacioException e) {
+			System.out.println("El titular insertado esta vacío.");
 		}
 	}
 

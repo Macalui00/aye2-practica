@@ -50,4 +50,13 @@ public class Empresa {
 			throw new BienInvalidoException("Bien no existente");
 		}
 	}
+	public void notificarTransferencia(Titular titular1, Titular titular2) throws SistemaEmpresaException {
+		if (titular2 == null) {
+			throw new TitularVacioException();
+		}
+		if(titular1.getDireccion() == null || titular2.getDireccion() == null) {
+			throw new DireccionIncorrectaException();
+		}
+		System.out.println("Enviar mail al titular anterior" + titular1.getNombre() + " de cambio alñ nuevo titular " + titular2.getNombre());
+	}
 }
