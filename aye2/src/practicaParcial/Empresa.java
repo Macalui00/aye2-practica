@@ -19,4 +19,32 @@ public class Empresa {
 		}
 		return instancia;
 	}
+	
+	public void agregarBien(Bien bien) throws BienInvalidoException{
+		if(bien == null) {
+			throw new BienInvalidoException("Bien vacío");
+		}
+		if(pertenece(bien, bienes)) {
+			throw new BienInvalidoException("Bien ya existente");
+		}
+		this.bienes.add(bien);
+	}
+
+	private boolean pertenece(Bien bien, List<Bien> bienes2) {
+		for(Bien b: bienes2) {
+			if(b.equals(bien)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public void eliminarBien(Bien bien) throws BienInvalidoException {
+		if(bien == null) {
+			throw new BienInvalidoException("Bien vacío");
+		}
+		if(!bienes.remove(bien)) {
+			throw new BienInvalidoException("Bien no existente");
+		}
+	}
 }

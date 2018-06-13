@@ -58,4 +58,7 @@ public class Bien {
 		return codigo;
 	}
 	
+	public boolean equals(Bien bien) {
+		return this.getCodigo() == bien.getCodigo();
+	}
 }
