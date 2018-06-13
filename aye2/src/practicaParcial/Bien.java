@@ -1,10 +1,10 @@
 package practicaParcial;
 
 public abstract class Bien {
-	private Titular titular;
-	private float valorMercado;
-	private float valorFiscal;
-	private int codigo;
+	protected Titular titular;
+	protected float valorMercado;
+	protected float valorFiscal;
+	protected int codigo;
 	
 	private static int proximoCodigo  = 0;
 	
