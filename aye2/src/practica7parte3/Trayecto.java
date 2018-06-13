@@ -15,16 +15,22 @@ public class Trayecto {
 		return eOrig;
 	}
 
-	public void seteOrig(Estacion eOrig) {
-		this.eOrig = eOrig;
+	public void seteOrig(Estacion eorig) throws EstacionErroneaException {
+		if (eorig == null) {
+			throw new EstacionErroneaException();
+		}
+		this.eOrig = eorig;
 	}
 
 	public Estacion geteDest() {
 		return eDest;
 	}
 
-	public void seteDest(Estacion eDest) {
-		this.eDest = eDest;
+	public void seteDest(Estacion edest)throws EstacionErroneaException {
+		if (edest == null) {
+			throw new EstacionErroneaException();
+		}
+		this.eDest = edest;
 	}
 
 	

@@ -5,7 +5,23 @@ public class Fecha {
 	private int mes;
 	private int año;
 	
-	 public Fecha(int d, int m, int a) {
+	/*Implementacion con Excepciones
+	 * public Fecha(int d, int m, int a) throws Exception{
+		 if ((d <= 0) || (d > CantDias(m, a))) {
+			 throw new CantDiasErroneo("Cantidad de días Erroneo");
+		 }
+		 if ((m <= 0) || (m > 12)) {
+			 throw new MesesErroneo("Cantidad de meses Erroneo");
+		 }
+		 if ((a <= 1800)) {
+			 throw new AñoErroneo("El año insertado es demasiado antiguo.");
+		 }
+		dia = d;
+		mes = m;
+		año = a;
+		revisarFecha();
+	}*/
+	public Fecha(int d, int m, int a){
 		dia = d;
 		mes = m;
 		año = a;
